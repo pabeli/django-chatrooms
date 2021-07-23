@@ -13,7 +13,7 @@ class ChatRoomConsumer(AsyncJsonWebsocketConsumer):
             self.room_group_name,
             {
                 'type': 'tester_message',
-                'tester': 'tester'
+                'tester': 'hello world'
             }
         )
     async def tester_message(self, event):
