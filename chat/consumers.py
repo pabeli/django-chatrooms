@@ -9,6 +9,9 @@ class ChatRoomConsumer(AsyncJsonWebsocketConsumer):
             self.room_group_name,
             self.channel_name
         )
+        # We can accept the connection
+        await self.accept()
+        # We can send messages
         await self.channel_layer.group_send(
             self.room_group_name,
             {
